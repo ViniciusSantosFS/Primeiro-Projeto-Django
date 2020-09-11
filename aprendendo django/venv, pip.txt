@@ -1,0 +1,51 @@
+Para ativar o ambiente virtual:
+venv\Scripts\activate
+
+e para desativar 
+venv\Scripts\deactivates
+----------------------------------------
+toda vez que eu criar um projeto eu preciso criar um venv e criar as 
+dependencias, no caso o pip
+
+
+pip = gerenciador dos pacotes externos que estamos utilizando
+
+pip install -r (-r para dizer que o arquivo é uma listinha) requirements.txt
+
+req + tab auto completa com o nome do arquivo 
+
+-------------------------------------------------
+Para iniciar um servidor
+
+cd projeto - entrar na pasta do Django
+
+python manage.py runserver - para iniciar o servidor
+
+pra deixar de rodar o servidor ctrl + c
+
+--------------------------------------------
+<ul>
+        {% for pessoa in pessoas %}
+            <li>{{ pessoa.nome }} {{ pessoa.idade }}</li>
+        {% endfor %}
+    </ul>
+adicionar pessoas e idade
+
+-----------------------------
+from django.shortcuts import render, redirect
+
+render para renderizar
+
+-------------------------
+pulo do gato fazer o django trazer coisas prontas de formas genéricas 
+e se somente se, precisarmos modificar a gente modifica uma parte daquele processo
+
+a parte que vmos deixar mais genérica vai ser a view, criamos as funções e agora vmos criar as views por classe
+
+nas documentações do django vai em Built-in class-based generic views
+
+quando estivermos programando primeiros importamos a do python
+--------------------------------
+
+Tarefa de casa: transformar o criar pessoas em algo genérico
+transformar em pessoa create view

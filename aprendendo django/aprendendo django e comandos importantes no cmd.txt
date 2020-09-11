@@ -1,0 +1,51 @@
+mkdir para criar um subdiretorio ou arquivo
+
+e cd nome do subdiretorio para entrar na pasta
+
+vamos criar um virtual venv com o intuito de me isolar do meu sistema operacional
+python -m venv venv(o segundo venv é pra definir o nome do meu ambiente virtual
+ex: venv projTeste) = para criar um ambiente virtual onde eu possa instalar o django
+sem que ele afete meu sistema operacional e eu posso trabalhar com multiplas versões
+
+para ativar essa virtual eu vou entrar em  cd venv e dps cd Scripts e activate
+cd venv = entrar na pasta venv
+cd Scripts = entrar na pasta Scripts
+activate para ativar a virtual
+(se aparecer a venv significa que ela esta instalada)
+outra maneira de ativar o ambiente virtual é usando source venv/bin/activate
+
+após ativar meu ambiente virtual eu devo voltar para a minha pasta sem ser a venv e instalar o django
+
+para voltar nas pastas eu uso o cd ..
+
+e após eu ter voltado a minha pasta eu uso o pip install django e automaticamente o pip vai começar 
+a instalar o django
+
+IMPORTANTE: eu só devo instalar o django quando eu estiver com a minha virtual env ativada
+
+após isso tudo quando eu entrar no python pelo cmd e usar o import django ele funcionara
+
+python = para entrar no python pelo cmd
+
+import django = para importar o django por python
+
+django.VERSION para checar a minha versão do django
+
+Com isso eu tenho o python instalado eu consigo criar minha virtual env, eu tenho o pip instalado e tenho o pycharm
+e com isso meu ambiente ja esta pronto para ser executado
+
+para criar um projeto django eu uso o comando 
+
+django-admin startproject e o nome do projeto = para criar um projeto django
+para verificar se o projeto foi criado com sucesso use o comando dir
+
+quando eu quiser rodar o servidor eu vou entrar na pasta do projeto django que eu criei e usar o comando python manage.py runserver
+cd meuPrimeiroProjeto
+python manage.py runserver
+---------------------------------------------------------
+não esquecer do .gitignore para ignorar os arquivos 
+venv/
+.idea/
+__pycache__
+*.sqlite3
+---------------------------------------------------------
