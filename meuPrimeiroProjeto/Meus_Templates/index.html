@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,10 +6,11 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel= "stylesheet" href= "{% static 'style.css' %}">
     <title>Document</title>
 </head>
 <body>
-    <h1>Ola Mundo</h1>
+    <h1 class="home">Ola Mundo</h1>
     <b>meu nome é fulano</b>
 </body>
 </html>
