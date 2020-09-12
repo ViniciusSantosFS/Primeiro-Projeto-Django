@@ -17,11 +17,11 @@ from django.contrib import admin
 from django.urls import path
 from .views import  hello
 from .views import numero
-from .views import fname
+from .views import fidade
 
 urlpatterns = [
-    path('hello/', hello),
+    path('hello/',hello),
     path('admin/', admin.site.urls),
     path('articles/<int:year>/', numero),
-    path("nome/<str:nome>", fname)
+    path("nome/<str:nome>",fidade)
 ]

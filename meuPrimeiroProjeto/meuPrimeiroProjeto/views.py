@@ -1,6 +1,8 @@
 from django.http import HttpResponse
+from django.shortcuts import render
+
 def hello (request):
-    return HttpResponse ("Ola Mundo");
+    return render(request, 'index.html')
 
 def numero (request, year):
     return HttpResponse('O ano enviado foi: ' + str(year))
@@ -18,9 +20,7 @@ def lerDoBanco(nome): #função para simular a leitura do banco de dados
     else :
         return {"nome": "Não encontrado", "idade": 0}
 
-def fname (request, nome ):
-    result = lerDoBanco(nome)
-    if result["idade"] > 0:
-        return HttpResponse( "o nome é " + result["nome"] + " e a idade " +  str(result['idade'])+ " anos" )
-    else:
-        return HttpResponse("Pessoa não encontrada")
+
+def fidade (request, nome):
+    idade = lerDoBanco(nome)['idade']
+    return render(request, 'pessoa.html', {'v_idade': idade})
