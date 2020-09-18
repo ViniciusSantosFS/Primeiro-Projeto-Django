@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title%}
+    People Remove
+{% endblock title%}
+
+{% block titlePage %}
+    People Remove
+{% endblock titlePage%}
+
+{%block content %}
+<form method="post">
+    <p><b>Are you sure to Delete {{persons.first_name}} {{persons.last_name}}</b></p>
+    {% csrf_token %}
+    {{ form.as_p }}
+<button type="submit">Delete</button>
+    </form>
+{% endblock content%}

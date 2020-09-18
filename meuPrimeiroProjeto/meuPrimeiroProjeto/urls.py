@@ -15,14 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from .views import  hello
-from .views import numero
-from .views import fidade
-from clientes import urls as clients_urls
+from django.conf.urls import url
 urlpatterns = [
-    path('hello/',hello),
-    path('admin/', admin.site.urls),
-    path('articles/<int:year>/', numero),
-    path('person/',include(clients_urls)),
-    path("nome/<str:nome>",fidade),
+    url('admin/', admin.site.urls),
+    url(r'', include('clientes.urls'))
 ]

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title%}
+    People List
+{% endblock title%}
+
+{% block titlePage %}
+    People List
+{% endblock titlePage%}
+
+{%block content %}
+    {% for persons in list %}
+    <table class = "table">
+        <thead>
+        <th> Name </th>
+        <th> age </th>
+        <th> salary </th>
+        <th> Edit </th>
+        <th> Delete </th>
+        </thead>
+        <tbody>
+        <tr>
+            <td>{{ persons.first_name }} {{ persons.last_name }}</td>
+            <td>{{ persons.age }}</td>
+            <td>{{ persons.salary }}</td>
+            <td>
+                <a href="{% url 'person_edit' pk=persons.pk %}">
+                    <button type ="submit">Edit</button>
+                </a>
+            </td>
+            <td>
+                <a href ="{% url 'person_remove' pk=persons.pk %}">
+                <button type="submit">Delete</button>
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    {% endfor %}
+    <a href="{% url 'person_create' %}">
+        <button type="submit">Sign in</button>
+    </a>
+{% endblock content%}
