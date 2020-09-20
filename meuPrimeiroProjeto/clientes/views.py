@@ -1,11 +1,19 @@
 from django.shortcuts import render,redirect,get_object_or_404
 from .models import *
 from django.forms import ModelForm
+from django import forms
 
 class personForm(ModelForm):
     class Meta:
         model = Person
         fields = ['first_name','last_name','age','salary','bio']
+
+
+    def clean_age(self):
+        age = self.cleaned_data["age"]
+        if int(age) < 0:
+            raise forms.ValidationError("Age must be positive")
+        return age
 
 
 def person_list(request):
