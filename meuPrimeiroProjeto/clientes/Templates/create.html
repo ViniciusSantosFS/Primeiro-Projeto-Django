@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load bootstrap3 %}
+
 {% block title%}
     People Create
 {% endblock title%}
@@ -11,7 +13,7 @@
 {%block content %}
 <form method="post">
     {% csrf_token %}
-    {{ form.as_p }}
-<button type="submit"> Sign in</button>
+    {% bootstrap_form form %}
+<button type="submit" class="btn btn-primary"> Sign in</button>
     </form>
 {% endblock content%}
